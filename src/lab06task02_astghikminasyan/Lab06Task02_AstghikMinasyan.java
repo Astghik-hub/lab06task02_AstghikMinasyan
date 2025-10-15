@@ -13,7 +13,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 /**
- * Git URL: 
+ * Git URL: https://github.com/Astghik-hub/lab06task02_AstghikMinasyan.git
  * @author Astghik Minasyan
  */
 public class Lab06Task02_AstghikMinasyan extends Application {
