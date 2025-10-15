@@ -60,7 +60,7 @@ public class Lab06Task02_AstghikMinasyan extends Application {
         // Create chimney rectangle
         Rectangle chimney = new Rectangle(25, 80);
         chimney.setFill(Color.GRAY);
-        chimney.setX(220);
+        chimney.setX(200);
         chimney.setY(120);
         
         // Create door rectangle
@@ -74,6 +74,10 @@ public class Lab06Task02_AstghikMinasyan extends Application {
         Rectangle window2 = new Rectangle(60,60);
         window1.setFill(Color.LIGHTBLUE);
         window2.setFill(Color.LIGHTBLUE);
+        window1.setX(155);
+        window1.setY(280);
+        window2.setX(315);
+        window2.setY(280);
         
         // Add the nodes to a Pane here.
         Pane root = new Pane();
@@ -83,6 +87,8 @@ public class Lab06Task02_AstghikMinasyan extends Application {
         root.getChildren().add(roof);
         root.getChildren().add(chimney);
         root.getChildren().add(door);
+        root.getChildren().add(window1);
+        root.getChildren().add(window2);
         
         // Create a Scene with the Pane as the root node, and display it here.
         Scene scene = new Scene(root, SCENE_WIDTH, SCENE_HEIGHT);
