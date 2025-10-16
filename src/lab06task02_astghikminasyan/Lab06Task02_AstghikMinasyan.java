@@ -8,6 +8,8 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Line;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
@@ -69,15 +71,38 @@ public class Lab06Task02_AstghikMinasyan extends Application {
         door.setX(520 / 2);
         door.setY(520 - 80 - (210 / 2));
         
-        // Creete the window rectangles
+        // Create the window rectangles
         Rectangle window1 = new Rectangle(60, 60);
         Rectangle window2 = new Rectangle(60,60);
         window1.setFill(Color.LIGHTBLUE);
         window2.setFill(Color.LIGHTBLUE);
-        window1.setX(155);
-        window1.setY(280);
-        window2.setX(315);
-        window2.setY(280);
+        window1.setX(150);
+        window1.setY(260);
+        window2.setX(310);
+        window2.setY(260);
+        
+        // Create lines for the windows
+        Line line1 = new Line(150 + 30, 260, 150 +30, 260 + 60);
+        Line line2 = new Line(150, 260 + 30, 150 + 60, 260 + 30);
+        Line line3 = new Line(310 + 30, 260, 310 + 30, 260 + 60);
+        Line line4 = new Line(310, 310 - 20, 310 + 60, 260 + 30);
+        
+        // Create the sun
+        Circle sun = new Circle(40);
+        sun.setCenterX(470);
+        sun.setCenterY(50);
+        sun.setFill(Color.YELLOW);
+        
+        // Create the rays fot the sun
+        Line ray1 = new Line(470, 90, 510, 90);
+        Line ray2 = new Line(470, 50, 400, 90);
+        Line ray3 = new Line(470, 50, 400, 10);
+        ray1.setStrokeWidth(2.5);
+        ray2.setStrokeWidth(2.5);
+        ray3.setStrokeWidth(2.5);
+        ray1.setStroke(Color.YELLOW);
+        ray2.setStroke(Color.YELLOW);
+        ray3.setStroke(Color.YELLOW);
         
         // Add the nodes to a Pane here.
         Pane root = new Pane();
@@ -89,6 +114,14 @@ public class Lab06Task02_AstghikMinasyan extends Application {
         root.getChildren().add(door);
         root.getChildren().add(window1);
         root.getChildren().add(window2);
+        root.getChildren().add(line1);
+        root.getChildren().add(line2);
+        root.getChildren().add(line3);
+        root.getChildren().add(line4);
+        root.getChildren().add(sun);
+        root.getChildren().add(ray1);
+        root.getChildren().add(ray2);
+        root.getChildren().add(ray3);
         
         // Create a Scene with the Pane as the root node, and display it here.
         Scene scene = new Scene(root, SCENE_WIDTH, SCENE_HEIGHT);
